@@ -12,7 +12,7 @@ client = RESTClient(api_key=API_KEY)
 
 
 ticker = 'TQQQ'
-date = '2025-11-17'
+date = '2025-11-24'
 
 """ 
 df = pd.DataFrame(client.list_options_contracts(
@@ -36,7 +36,7 @@ url = "https://api.massive.com/v3/snapshot?order=asc&ticker=" + ticker + "&limit
 
 counter = 0
 
-while url is not None and counter < 100:
+while url is not None and counter < 1000:
     print(counter)
     r = requests.get(url)
     data = r
